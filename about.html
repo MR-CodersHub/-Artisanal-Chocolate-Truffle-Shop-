@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('cacao_theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>CACAO ARTISANAL | Our Story & Craftsmanship</title>
+    <meta name="description" content="Discover our journey, micro-lot sourcing philosophy, direct-trade practices, and slow-crafted tempering methods in our chocolate salon.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating Abstract Geometric Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <span class="logo-main">CACAO</span>
+                <span class="logo-sub">ARTISANAL</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+    <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="collections.html" class="nav-link">Collections</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-icon-wrapper">
+                        <!-- Sun Icon -->
+                        <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <button class="dir-toggle" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+                <a href="signin.html" class="auth-btn" aria-label="Account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </a>
+                <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Redesigned About Editorial Hero Section -->
+    <section class="about-editorial-hero">
+        <div class="container">
+            <div class="about-hero-grid">
+                <!-- Left: Rich Storytelling -->
+                <div class="about-hero-text fade-in-element">
+                    <span class="editorial-tag">Our Vision & Philosophy</span>
+                    <h1 class="about-hero-title">Sculpting Taste Into Pure Culinary Art</h1>
+                    <p class="about-hero-subtitle">We began with a singular question: Can chocolate inspire the same intellectual complexity and emotional resonance as a fine painting or a rare vintage wine?</p>
+                    <p style="font-weight: 300; line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 30px;">
+                        Cacao Artisanal was founded in 2018 as a direct response to the flavour uniformity of industrial chocolate. Our founders &mdash; chef Anelia Vance and cacao specialist Marcus Vance &mdash; spent two years travelling through South America and East Africa, documenting fermentation practices across 14 cooperatives before establishing direct-trade agreements with seven of them.
+                    </p>
+                    <p style="font-weight: 300; line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 30px;">
+                        Every truffle and single-origin bar in our current collection is conched for 72 hours, hand-tempered on Carrara marble, and finished with natural cocoa butter tints in batches of 200 units or fewer. Each piece carries a flavour profile determined by its origin&rsquo;s specific soil geochemistry, ambient fermentation temperature, and drying method &mdash; from the volcanic loam of Ecuador&rsquo;s Guayas province to the humid canopy of Madagascar&rsquo;s Sambirano Valley.
+                    </p>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <a href="shop.html" class="btn btn-primary">Browse Delicacies</a>
+                        <a href="#terroir-explorer" class="btn btn-secondary">Explore Terroirs</a>
+                    </div>
+                </div>
+
+                <!-- Right: Overlapping Visual Frame -->
+                <div class="about-hero-image-wrapper fade-in-element delay-200">
+                    <div class="about-hero-image-frame">
+                        <img src="https://plus.unsplash.com/premium_photo-1667031518595-9cb4b0d504ef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2hvY29sYXRlfGVufDB8fDB8fHww" alt="Handcrafted chocolates" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Values Section (Redesigned Grid) -->
+    <section class="values-section" style="background-color: var(--bg-primary);">
+        <div class="container">
+            <div class="about-values-intro fade-in-element">
+                <span class="editorial-tag">Core Tenets</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-family: var(--font-serif);">Principles of Our Atelier</h2>
+                <p style="font-weight: 300; color: var(--color-text-secondary); margin-top: 15px;">Every decision in our atelier is governed by three criteria: the provenance of raw materials, the purity of the composition, and the discipline of the hand-finish. These tenets define how we source, formulate, and release each production.</p>
+            </div>
+            
+            <div class="values-grid">
+                <!-- Card 1 -->
+                <div class="value-card fade-in-element">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3>Micro-Lot Sourcing</h3>
+                    <p>We contract exclusively with single-family cooperatives in Ecuador, Madagascar, and Peru, limiting each harvest to parcels under 500 kilograms. This scale preserves the geochemical signature of each origin: the mineral composition of volcanic loam, the ambient humidity during fermentation, and the native yeast populations that drive flavour development.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="value-card fade-in-element" style="transition-delay: 0.1s;">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Organic & Pure</h3>
+                    <p>Our sweetening protocol uses three ingredients only: organic unrefined cane sugar from Cauca Valley, wildflower honey harvested within 80 kilometres of the atelier, and caramel developed in copper kettles over a 6-hour thermal cycle. No invert syrups, no emulsifiers, no preservatives.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="value-card fade-in-element" style="transition-delay: 0.2s;">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="3.5" r="1.5"/><circle cx="8.5" cy="5.5" r="1.5"/><circle cx="5.5" cy="10.5" r="1.5"/><circle cx="6.5" cy="14.5" r="1.5"/><path d="M12 22c4-4 7-9 7-14 0-2-1.5-4-3.5-4S12 4 12 6c0-2-1.5-4-3.5-4S5 6 5 8c0 5 3 10 7 14z"/></svg>
+                    </div>
+                    <h3>Artistic Presentation</h3>
+                    <p>Each truffle is hand-painted with cocoa butter tinted using natural mineral pigments: carmine, turmeric, and chlorophyll, applied in single-pass brushstrokes. Bars are cast in custom geometric moulds with beveled edges and debossed cacao percentages, eliminating the need for external packaging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Sourcing & Direct Trade Section -->
+    <section class="sourcing-integrity-section">
+        <div class="container">
+            <div class="text-center fade-in-element" style="margin-bottom: 50px;">
+                <span class="editorial-tag">Sourcing & Import</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-family: var(--font-serif);">Global Direct Trade Network</h2>
+                <p style="font-weight: 300; max-width: 600px; margin: 15px auto 0 auto; color: var(--color-text-secondary);">We maintain direct-trade relationships with seven cooperatives across five origin countries. Every import lot is accompanied by a provenance dossier: farm GPS coordinates, fermentation log, and FOB premium paid above the commodity market price.</p>
+            </div>
+            <div class="sourcing-promises-grid">
+                <div class="sourcing-promise-card fade-in-element">
+                    <div class="sourcing-promise-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 7 7 7 7"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5C17 4 17 7 17 7"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                    </div>
+                    <h3>Ethical Import Standards</h3>
+                    <p>Each shipment is governed by a direct-trade contract specifying a floor price 40% above the ICE futures market, with an additional quality premium paid upon cupping scores above 82 points. Cooperative audits are conducted twice annually by an independent third-party certifier.</p>
+                </div>
+                <div class="sourcing-promise-card fade-in-element" style="transition-delay: 0.1s;">
+                    <div class="sourcing-promise-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Micro-Lot Export Network</h3>
+                    <p>Fermented beans are vacuum-sealed at origin within 12 hours of reaching the drying yard, then shipped in refrigerated containers held at 12&deg;C to arrest spontaneous acid development during transit. Current origins: Ecuador (Nacional), Peru (Criollo), Madagascar (Trinitario), Vietnam (Trinitario hybrid).</p>
+                </div>
+                <div class="sourcing-promise-card fade-in-element" style="transition-delay: 0.2s;">
+                    <div class="sourcing-promise-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3>Farm-to-Kitchen Traceability</h3>
+                    <p>Each finished product carries an alphanumeric lot code corresponding to a specific fermentation box at origin. Customers who enter this code on our platform receive the harvest date, drying method, producer name, and the corresponding SCA cupping score for that batch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftsmanship Section -->
+    <section class="craftsmanship-flow">
+        <div class="container">
+            <div class="text-center fade-in-element">
+                <span class="editorial-tag">The Atelier Method</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-family: var(--font-serif);">Production Protocol</h2>
+                <p style="font-weight: 300; max-width: 550px; margin: 15px auto 0 auto; color: var(--color-text-secondary);">Our method follows four sequential transformations: sourcing, roasting, conching, and finishing. Each is governed by specific time and temperature parameters developed through 400+ experimental batches since 2018.</p>
+            </div>
+
+            <div class="craft-grid">
+                <!-- Step 1 -->
+                <div class="craft-step-card fade-in-element">
+                    <span class="craft-step-num">01</span>
+                    <h3>Micro-Lot Sourcing</h3>
+                    <p>We source exclusively from farms that practise shade-grown agroforestry under native canopy, selecting ancient Nacional, Criollo, and Trinitario varieties with documented genetic lineage and documented SCA cupping scores above 80.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="craft-step-card fade-in-element" style="transition-delay: 0.1s;">
+                    <span class="craft-step-num">02</span>
+                    <h3>Artisanal Roasting</h3>
+                    <p>Beans are roasted in 5-kilogram batches within a drum roaster calibrated to a temperature curve peaking at 120&deg;C. The profile is designed to preserve the citrus, floral, and herbaceous tasting notes specific to each lot&rsquo;s fermentation method.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="craft-step-card fade-in-element" style="transition-delay: 0.2s;">
+                    <span class="craft-step-num">03</span>
+                    <h3>72-Hour Conching</h3>
+                    <p>Nibs are ground between pre-warmed granite melangeurs at 55 RPM for a minimum of 72 hours. This low-shear regimen reduces particle size below 25 microns while retaining volatile aromatic compounds that dissipate under high-friction industrial methods.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="craft-step-card fade-in-element" style="transition-delay: 0.3s;">
+                    <span class="craft-step-num">04</span>
+                    <h3>Hand-Painting & Tempering</h3>
+                    <p>Tempering follows a five-stage thermal curve executed on Carrara marble: melt to 45&deg;C, cool to 27&deg;C, warm to 31&deg;C, hold for crystallisation, then deposit. Finished pieces are polished by hand with a dry chamois before packaging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Scale & Global Delivery Section -->
+    <section style="padding: 100px 0; background-color: var(--bg-primary);">
+        <div class="container">
+            <div class="text-center fade-in-element" style="margin-bottom: 50px;">
+                <span class="editorial-tag">Production & Delivery</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-family: var(--font-serif);">From Small Batches to Worldwide Reach</h2>
+                <p style="font-weight: 300; max-width: 600px; margin: 15px auto 0 auto; color: var(--color-text-secondary);">Batch sizes are capped at 200 units to preserve manual oversight at every stage. Our logistics network spans 32 countries through two temperature-controlled carrier agreements.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: 30px;">
+                <div class="sourcing-promise-card fade-in-element" style="text-align: left; display: flex; gap: 20px; align-items: flex-start; padding: 35px;">
+                    <div class="sourcing-promise-icon" style="flex-shrink: 0; margin-bottom: 0;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 8px;">Micro-Batch Production</h3>
+                            <p style="font-size: 0.85rem; font-weight: 300; line-height: 1.7; color: var(--color-text-secondary);">Each production run is limited to 200 units to enable individual inspection of every piece for gloss uniformity, snap acoustics, and fill-centre concentricity. Output is scheduled in 48-hour cycles with 24-hour resting periods between batches to allow equipment to return to ambient temperature.</p>
+                        </div>
+                    </div>
+
+                    <div class="sourcing-promise-card fade-in-element" style="text-align: left; display: flex; gap: 20px; align-items: flex-start; padding: 35px; transition-delay: 0.1s;">
+                        <div class="sourcing-promise-icon" style="flex-shrink: 0; margin-bottom: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/><path d="M8 17h8"/><path d="M3 10V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8"/><path d="M3 10h18"/></svg>
+                        </div>
+                        <div>
+                            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 8px;">Temperature-Controlled Logistics</h3>
+                            <p style="font-size: 0.85rem; font-weight: 300; line-height: 1.7; color: var(--color-text-secondary);">Shipments are packed in expanded-polystyrene containers preconditioned to 16&deg;C, with phase-change gel packs calibrated to maintain 16&ndash;20&deg;C for 72 hours. Domestic transit: 24&ndash;48 hours via temperature-monitored courier. International: 3&ndash;5 business days to 32 countries under CITES-compliant customs documentation.</p>
+                        </div>
+                    </div>
+
+                    <div class="sourcing-promise-card fade-in-element" style="text-align: left; display: flex; gap: 20px; align-items: flex-start; padding: 35px; transition-delay: 0.2s;">
+                        <div class="sourcing-promise-icon" style="flex-shrink: 0; margin-bottom: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                        </div>
+                        <div>
+                            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 8px;">International Wholesale & Export</h3>
+                            <p style="font-size: 0.85rem; font-weight: 300; line-height: 1.7; color: var(--color-text-secondary);">Our wholesale channel supplies 14 hospitality accounts across Europe and East Asia, including three Michelin-starred kitchens. We offer private-label formulation, custom cocoa butter colour matching, and subscription replenishment cycles aligned with each client&rsquo;s menu rotation calendar.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Journey Section -->
+    <section class="timeline-section" id="sustainability">
+        <div class="container">
+            <div class="text-center fade-in-element" style="margin-bottom: 50px;">
+                <span class="editorial-tag">The Timeline</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-family: var(--font-serif);">Our Historic Journey</h2>
+            </div>
+            
+            <div class="timeline">
+                <!-- Item 1 -->
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2018</span>
+                        <h4>Founding the Atelier</h4>
+                        <p>Opened a small basement test kitchen in the culinary district, exploring micro-fermentation and cacao roasting parameters.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2021</span>
+                        <h4>The Boutique Launch</h4>
+                        <p>Opened our physical Salon and introduced our first collection of 6 hand-painted truffles, merging cacao with seasonal botanical infusions.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h4>Direct Farm Alliance</h4>
+                        <p>Signed trade alliances with three small family cooperatives in Peru and Madagascar, guaranteeing fair wages and regenerative forestry.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="timeline-item fade-in-element">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2026</span>
+                        <h4>The Chocolate Library</h4>
+                        <p>Launched a digital reference platform featuring tasting guides, origin dossiers, and seasonal pairing recommendations for subscribers across 12 countries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Terroir Map Explorer Section -->
+    <section class="terroir-section" id="terroir-explorer">
+        <div class="container">
+            <div class="text-center fade-in-element" style="margin-bottom: 50px;">
+                <span class="editorial-tag">Interactive Sourcing Map</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-family: var(--font-serif); color: var(--color-black);">Terroirs of Character</h2>
+                <p style="font-weight: 300; max-width: 550px; margin: 15px auto 0 auto; color: var(--color-text-secondary);">Select any highlighted origin pin to view elevation data, soil composition, fermentation method, and the resulting flavour profile for each cooperative lot.</p>
+            </div>
+
+            <div class="terroir-explorer-grid">
+                <!-- Map Left -->
+                <div class="terroir-map-container id-wrapper fade-in-element" id="terroir-map">
+                    <!-- Simple Vector Outline of World Map -->
+                    <svg class="terroir-svg-map" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+                        <!-- North America -->
+                        <path d="M150,150 L200,100 L250,120 L300,150 L280,220 L230,250 L210,230 L160,200 Z" fill="currentColor" />
+                        <!-- South America -->
+                        <path d="M250,260 L280,280 L320,320 L330,380 L350,450 L310,480 L280,450 L260,380 L230,300 Z" fill="currentColor" />
+                        <!-- Africa -->
+                        <path d="M450,220 L500,200 L550,220 L600,250 L620,290 L600,340 L550,380 L520,390 L480,350 L470,300 L430,250 Z" fill="currentColor" />
+                        <!-- Madagascar -->
+                        <path d="M620,350 L630,340 L640,360 L630,380 Z" fill="currentColor" />
+                        <!-- Europe / Asia -->
+                        <path d="M450,150 L500,120 L600,100 L700,90 L850,110 L900,160 L850,220 L750,250 L650,220 L550,200 Z" fill="currentColor" />
+                    </svg>
+
+                    <!-- Interactive Pin - Ecuador -->
+                    <div class="terroir-pin pin-ecuador active" data-terroir="ecuador">
+                        <div class="terroir-pin-dot"></div>
+                        <span class="terroir-pin-label">Ecuador</span>
+                    </div>
+
+                    <!-- Interactive Pin - Peru -->
+                    <div class="terroir-pin pin-peru" data-terroir="peru">
+                        <div class="terroir-pin-dot"></div>
+                        <span class="terroir-pin-label">Peru</span>
+                    </div>
+
+                    <!-- Interactive Pin - Madagascar -->
+                    <div class="terroir-pin pin-madagascar" data-terroir="madagascar">
+                        <div class="terroir-pin-dot"></div>
+                        <span class="terroir-pin-label">Madagascar</span>
+                    </div>
+                </div>
+
+                <!-- Info Column Right -->
+                <div class="terroir-details-column fade-in-element delay-200">
+                    <div class="terroir-details-box">
+                        <span class="editorial-tag" id="terroir-cacao" style="color: var(--color-accent);">Ancient Nacional Sourcing</span>
+                        <h3 id="terroir-title" style="font-family: var(--font-serif); font-size: 2.2rem; margin: 10px 0 20px 0; color: var(--color-black);">Guayas Province, Ecuador</h3>
+                        <p id="terroir-desc" style="font-weight: 300; font-size: 0.95rem; line-height: 1.7; color: var(--color-text-secondary);">Sourced from Vicente Norero's Camino Verde estate. The slow sun-drying yields a chocolate with singular floral complexity and a glossy finish.</p>
+                        
+                        <div class="terroir-details-meta">
+                            <div class="td-item">
+                                <h5>Elevation</h5>
+                                <p id="terroir-altitude">320m above sea level</p>
+                            </div>
+                            <div class="td-item">
+                                <h5>Tasting Signature</h5>
+                                <p id="terroir-notes" style="color: var(--color-accent);">Floral jasmines, honeyed sweetness, and soft wood-smoke</p>
+                            </div>
+                        </div>
+
+                        <a href="shop.html?category=truffles" class="btn btn-black-pill">Shop Sourced Delicacies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Masters Team Section (NEW) -->
+    <section class="masters-section">
+        <div class="container">
+            <div class="text-center fade-in-element">
+                <span class="editorial-tag">The Masters</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-family: var(--font-serif);">Chocolatiers of the Atelier</h2>
+                <p style="font-weight: 300; max-width: 550px; margin: 15px auto 0 auto; color: var(--color-text-secondary);">The atelier is directed by two specialists whose combined expertise spans agricultural sourcing and pastry arts, each with over a decade of experience in their respective fields.</p>
+            </div>
+
+            <div class="masters-grid">
+                <!-- Master 1 -->
+                <div class="master-card fade-in-element">
+                    <div class="master-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1627647227768-705244233b56?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2hvY29sYXRlfGVufDB8fDB8fHww" alt="Anelia Vance, Head Chocolatier" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                    </div>
+                    <div class="master-info">
+                        <h3>Anelia Vance</h3>
+                        <span class="master-role">Head Master Chocolatier</span>
+                        <p class="master-bio">Trained in Paris under legacy pastry chefs, Anelia approaches cacao as a sculptural medium. She designs our quarterly truffle collections, pairing rare cocoa butter with seasonal organic botanicals.</p>
+                    </div>
+                </div>
+
+                <!-- Master 2 -->
+                <div class="master-card fade-in-element" style="transition-delay: 0.15s;">
+                    <div class="master-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1565071559227-20ab25b7685e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Marcus Vance, Cocoa Sourcerer" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                    </div>
+                    <div class="master-info">
+                        <h3>Marcus Vance</h3>
+                        <span class="master-role">Cocoa Sourcing Specialist</span>
+                        <p class="master-bio">Marcus spends months of the year traveling through South America and East Africa, visiting family cooperatives to identify rare cocoa varieties and ensure sustainable direct trade contracts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasting Room Booking Banner (NEW) -->
+    <section class="tasting-booking-section">
+        <div class="container">
+            <div class="tasting-booking-card fade-in-element">
+                <div class="tasting-booking-content">
+                    <span class="editorial-tag" style="color: var(--color-accent);">Private Gatherings</span>
+                    <h2>Experience the Chocolate Salon</h2>
+                    <p>Join us at our Boutique Salon for a chef-guided tasting session covering single-origin identification, flavour profile mapping, and pairing theory with organic teas and single-cask whiskeys.</p>
+                    <a href="contact.html" class="btn btn-secondary-pill" style="border-color: var(--bg-primary); color: var(--bg-primary); font-weight:600;">Reserve Tasting Session</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Column 1: Brand Info -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-main">CACAO</span>
+                    <span class="logo-sub">ARTISANAL</span>
+                </a>
+                <p class="footer-about-text">A chocolate atelier focused on single-origin bars, hand-painted truffles, and direct-trade sourcing from five growing regions across South America, Africa, and Southeast Asia.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22a9 9 0 0 1-2.58-13.78A9 9 0 0 1 18 10c0 4.26-2.94 7-6 7a3 3 0 0 1-2.92-2.58C9 14.07 9.65 12 10.42 10.37c.56-1.18.23-2.37-.84-2.37a2.5 2.5 0 0 0-2.48 2.65c0 .6.15 1.15.35 1.6L6.5 17.5A17.7 17.7 0 0 0 8 22z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Site Navigation -->
+            <div class="footer-links-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home 2 (Story)</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop.html">Delicacy Shop</a></li>
+                    <li><a href="blog.html">Chef's Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Custom Offerings -->
+            <div class="footer-links-col">
+                <h4 class="footer-title">Boutique</h4>
+                <ul>
+                    <li><a href="collections.html">Chocolate Library</a></li>
+                    <li><a href="gift-box.html">Bespoke Gift Boxes</a></li>
+                    <li><a href="seasonal.html">Seasonal Releases</a></li>
+                    <li><a href="collections.html#custom-box-builder">Truffle Box Builder</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Premium Contact Info & Hours -->
+            <div class="footer-contact-col">
+                <h4 class="footer-title">Contact</h4>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <p>42 Caramel Boulevard<br>Suite 100, Gourmet District</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <p><a href="mailto:hello@cacaoartisanal.com" style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(250,246,240,0.45); padding-bottom: 1px; transition: var(--transition-fast);">hello@cacaoartisanal.com</a></p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <p>+1 (555) 019-2026</p>
+                    </div>
+                </div>
+                <div class="footer-hours">
+                    <strong>Atelier Hours</strong>
+                    Mon - Sat: 10:00 - 19:00 | Sun: 11:00 - 17:00
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright and Legal Links -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Cacao Artisanal. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="products-data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+

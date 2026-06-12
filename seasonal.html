@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('cacao_theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>CACAO ARTISANAL | Seasonal Releases</title>
+    <meta name="description" content="Discover our limited-edition seasonal chocolates, holiday truffle collections, and festival releases with countdowns and premium storytelling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0.700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <span class="logo-main">CACAO</span>
+                <span class="logo-sub">ARTISANAL</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+    <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="collections.html" class="nav-link">Collections</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-icon-wrapper">
+                        <!-- Sun Icon -->
+                        <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <button class="dir-toggle" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+                <a href="signin.html" class="auth-btn" aria-label="Account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </a>
+                <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="seasonal-page">
+        <section class="collections-hero seasonal-hero">
+            <div class="container text-center">
+                <span class="editorial-tag">LIMITED EDITIONS</span>
+                <h1>Seasonal Chocolate Releases</h1>
+                <p class="section-subtitle">Celebrate every season with festive flavors, hand-finished truffle boxes, and exclusive limited-run collections.</p>
+            </div>
+        </section>
+
+        <section class="seasonal-countdown">
+            <div class="section-container countdown-card">
+                <div>
+                    <span class="editorial-tag">Next Release</span>
+                    <h2>Autumn Spice Collection drops in</h2>
+                </div>
+                <div class="countdown-timer" data-countdown="2026-09-22T12:00:00"></div>
+            </div>
+        </section>
+
+        <section class="seasonal-grid-section">
+            <div class="section-container seasonal-grid">
+                <article class="seasonal-card">
+                    <span class="seasonal-badge">Valentine's Day</span>
+                    <div style="width:100%; height:160px; border-radius:12px; overflow:hidden;">
+                        <img src="https://images.unsplash.com/photo-ssG41C6mwrQ?w=400&auto=format" alt="Valentine's Day truffles" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h3>Rose & Raspberry Truffle Box</h3>
+                    <p>Silky dark ganache finished with freeze-dried raspberry and rose petals in a satin-lined gift box.</p>
+                </article>
+                <article class="seasonal-card">
+                    <span class="seasonal-badge">Christmas</span>
+                    <div style="width:100%; height:160px; border-radius:12px; overflow:hidden;">
+                        <img src="https://images.unsplash.com/photo-IB6e97oAx-E?w=400&auto=format" alt="Christmas truffles" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h3>Spiced Holiday Truffle Set</h3>
+                    <p>Warm cinnamon, nutmeg, chestnut, and caramel notes topped with sparkling cocoa dust.</p>
+                </article>
+                <article class="seasonal-card">
+                    <span class="seasonal-badge">Summer Citrus</span>
+                    <div style="width:100%; height:160px; border-radius:12px; overflow:hidden;">
+                        <img src="https://images.unsplash.com/photo-nAPcwGstWR0?w=400&auto=format" alt="Summer citrus chocolate" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h3>Citron Blossom Bar Pairing</h3>
+                    <p>Bright yuzu, orange blossom, and roasted almond balance a luminous milk chocolate bar.</p>
+                </article>
+                <article class="seasonal-card">
+                    <span class="seasonal-badge">Autumn Spice</span>
+                    <div style="width:100%; height:160px; border-radius:12px; overflow:hidden;">
+                        <img src="https://images.unsplash.com/photo-gxBfOS9Hq4M?w=400&auto=format" alt="Autumn spice chocolate" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h3>Pumpkin & Fig Ganache Box</h3>
+                    <p>Earthy fig, toasted pumpkin seeds, and brown butter marry with 68% dark chocolate.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Column 1: Brand Info -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-main">CACAO</span>
+                    <span class="logo-sub">ARTISANAL</span>
+                </a>
+                <p class="footer-about-text">A modern artisanal chocolate salon, dedicated to slow-crafted truffles, rare single-origin bars, and visually artistic desserts. Celebrating taste as high art.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22a9 9 0 0 1-2.58-13.78A9 9 0 0 1 18 10c0 4.26-2.94 7-6 7a3 3 0 0 1-2.92-2.58C9 14.07 9.65 12 10.42 10.37c.56-1.18.23-2.37-.84-2.37a2.5 2.5 0 0 0-2.48 2.65c0 .6.15 1.15.35 1.6L6.5 17.5A17.7 17.7 0 0 0 8 22z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Site Navigation -->
+            <div class="footer-links-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home 2 (Story)</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop.html">Delicacy Shop</a></li>
+                    <li><a href="blog.html">Chef's Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Custom Offerings -->
+            <div class="footer-links-col">
+                <h4 class="footer-title">Boutique</h4>
+                <ul>
+                    <li><a href="collections.html">Chocolate Library</a></li>
+                    <li><a href="gift-box.html">Bespoke Gift Boxes</a></li>
+                    <li><a href="seasonal.html">Seasonal Releases</a></li>
+                    <li><a href="collections.html#custom-box-builder">Truffle Box Builder</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Premium Contact Info & Hours -->
+            <div class="footer-contact-col">
+                <h4 class="footer-title">Contact</h4>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <p>42 Caramel Boulevard<br>Suite 100, Gourmet District</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <p><a href="mailto:hello@cacaoartisanal.com" style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(250,246,240,0.45); padding-bottom: 1px; transition: var(--transition-fast);">hello@cacaoartisanal.com</a></p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <p>+1 (555) 019-2026</p>
+                    </div>
+                </div>
+                <div class="footer-hours">
+                    <strong>Atelier Hours</strong>
+                    Mon - Sat: 10:00 - 19:00 | Sun: 11:00 - 17:00
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright and Legal Links -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Cacao Artisanal. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

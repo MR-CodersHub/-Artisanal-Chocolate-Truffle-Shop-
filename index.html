@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('cacao_theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>CACAO ARTISANAL | Premium Handcrafted Chocolate & Truffles</title>
+    <meta name="description"
+        content="Indulge in our exquisite single-origin artisanal chocolates, hand-tempered truffles, and gourmet dessert pairings. Handcrafted with organic cacao and vibrant caramel.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating Abstract Geometric Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <span class="logo-main">CACAO</span>
+                <span class="logo-sub">ARTISANAL</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="home2.html" class="nav-link">Home 2</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="collections.html" class="nav-link">Collections</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-icon-wrapper">
+                        <!-- Sun Icon -->
+                        <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <button class="dir-toggle" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+                <a href="signin.html" class="auth-btn" aria-label="Account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </a>
+                <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-container">
+            <div class="hero-content fade-in-up">
+                <div class="hero-badge">Est. 2026 • Organic Single-Origin</div>
+                <h1 class="hero-title">Sculpted by Nature.<br><span class="highlight-text">Handcrafted by
+                        Artisans.</span></h1>
+                <p class="hero-description">A sensory journey through rare single-origin chocolates, infused with rich
+                    salted caramel and wild organic botanicals. Pure, slow-crafted excellence.</p>
+                <div class="hero-cta-wrapper">
+                    <a href="#collections" class="btn btn-primary">Explore Collections</a>
+                    <a href="#about" class="btn btn-secondary">Our Philosophy</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Organic Cacao</span>
+                    </div>
+                    <div class="stat-item">
+                        <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        <span class="stat-num">7</span>
+                        <span class="stat-label">Rare Origins</span>
+                    </div>
+                    <div class="stat-item">
+                        <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="9" y1="12" x2="15" y2="12"/></svg>
+                        <span class="stat-num">0</span>
+                        <span class="stat-label">Artificial Additives</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual fade-in-up delay-200">
+                <div class="hero-image-wrapper">
+                    <img src="images/hero.png" alt="Premium gourmet chocolate assortment on a cream stone slab"
+                        class="hero-image">
+                    <!-- Floating Gold Medal Badge -->
+                    <div class="floating-badge">
+                        <svg viewBox="0 0 100 100" width="110" height="110">
+                            <defs>
+                                <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                            </defs>
+                            <text font-size="9" font-weight="700" fill="currentColor" letter-spacing="1.5">
+                                <textPath href="#circlePath">
+                                    ★ GOLD MEDAL WINNER ★ GOURMET DESSERT AWARDS
+                                </textPath>
+                            </text>
+                        </svg>
+                        <div class="badge-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Truffles Showcase Section (Asymmetric Layout) -->
+    <section class="truffles-section" id="truffles">
+        <!-- Floating organic shape background -->
+        <div class="section-shape orange-blob-1"></div>
+        <div class="section-container">
+            <div class="truffles-header">
+                <div class="header-left">
+                    <span class="section-subtitle">Exquisite Hand-Rolled Creations</span>
+                    <h2 class="section-title">The Truffle Collection</h2>
+                </div>
+                <div class="header-right">
+                    <p class="header-text-p">Our signature truffles are filled with silky, slow-cooked ganache, finished
+                        with micro-thin shells, and rolled in organic botanicals, sea salts, or caramel dust.</p>
+                </div>
+            </div>
+
+            <div class="truffle-showcase-grid">
+                <!-- Left: Big Feature Product (Asymmetric layout) -->
+                <div class="truffle-feature-card fade-in-element">
+                    <div class="feature-image-container">
+                        <img src="https://images.unsplash.com/photo-1702743692629-b11e94c63b0a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2hvY2xhdGUlMjBzaG9wfGVufDB8fDB8fHww" alt="Handmade chocolate truffles selection"
+                            class="feature-image">
+                        <div class="feature-badge">Signature Selection</div>
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-header">
+                            <h3 class="feature-title">The Grand Cru Assortment</h3>
+                            <span class="feature-price">$45.00</span>
+                        </div>
+                        <p class="feature-desc">A curated library of 12 exquisite truffles including Burnt Caramel,
+                            Smoked Salt Ganache, Spiced Blood Orange, and Wild lavender. Elegantly presented in an
+                            embossed, eco-friendly cream box.</p>
+                        <div class="feature-meta">
+                            <span>12 Pieces</span>
+                            <span>•</span>
+                            <span>Single-Origin Blend</span>
+                            <span>•</span>
+                            <span>Gluten-Free</span>
+                        </div>
+                        <button class="btn btn-black-pill add-to-cart-btn" data-name="The Grand Cru Assortment"
+                            data-price="45.00" style="margin-top: 28px;">Add to Box</button>
+                    </div>
+                </div>
+
+                <!-- Right: Truffles Grid of individual flavors -->
+                <div class="truffle-list-grid">
+                    <!-- Truffle Card 1 -->
+                    <div class="truffle-item-card fade-in-element">
+                        <div class="truffle-item-img-wrapper">
+                            <img src="images/truffle-burnt-caramel.png" alt="Burnt Caramel Truffle" class="truffle-item-img">
+                        </div>
+                        <div class="truffle-item-info">
+                            <span class="truffle-item-num">01</span>
+                            <h4 class="truffle-item-name">Burnt Caramel Truffle</h4>
+                            <p class="truffle-item-desc">Liquid amber caramel infused with organic French sea salt,
+                                enveloped in 70% dark shell.</p>
+                            <div class="truffle-item-footer">
+                                <span class="truffle-item-price">$3.50 / pc</span>
+                                <button class="add-to-cart-icon add-to-cart-btn" data-name="Burnt Caramel Truffle"
+                                    data-price="3.50" aria-label="Add to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Truffle Card 2 -->
+                    <div class="truffle-item-card fade-in-element">
+                        <div class="truffle-item-img-wrapper">
+                            <img src="https://plus.unsplash.com/premium_photo-1671059792129-8fb1cff208f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHJvc2VtYXJ5JTIwY2hvY29sYXRlfGVufDB8fDB8fHww" alt="Wild Lavender Ganache" class="truffle-item-img">
+                        </div>
+                        <div class="truffle-item-info">
+                            <span class="truffle-item-num">02</span>
+                            <h4 class="truffle-item-name">Wild Lavender Ganache</h4>
+                            <p class="truffle-item-desc">Infused with locally sourced lavender buds and whipped
+                                Madagascar white chocolate ganache.</p>
+                            <div class="truffle-item-footer">
+                                <span class="truffle-item-price">$3.75 / pc</span>
+                                <button class="add-to-cart-icon add-to-cart-btn" data-name="Wild Lavender Ganache"
+                                    data-price="3.75" aria-label="Add to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Truffle Card 3 -->
+                    <div class="truffle-item-card fade-in-element">
+                        <div class="truffle-item-img-wrapper">
+                            <img src="https://plus.unsplash.com/premium_photo-1670426502004-1bcd3215b425?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cm9zZW1hcnklMjBjaG9jb2xhdGV8ZW58MHx8MHx8fDA%3D" class="truffle-item-img">
+                        </div>
+                        <div class="truffle-item-info">
+                            <span class="truffle-item-num">03</span>
+                            <h4 class="truffle-item-name">Blood Orange Praline</h4>
+                            <p class="truffle-item-desc">Zesty Sicilian blood orange reduction blended with roasted
+                                hazelnut praline creme.</p>
+                            <div class="truffle-item-footer">
+                                <span class="truffle-item-price">$3.50 / pc</span>
+                                <button class="add-to-cart-icon add-to-cart-btn" data-name="Blood Orange Praline"
+                                    data-price="3.50" aria-label="Add to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chocolate Collections (Bar Collection with Asymmetric Grid) -->
+    <section class="collections-section" id="collections">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Single-Origin Bean-To-Bar</span>
+                <h2 class="section-title">The Chocolate Library</h2>
+                <div class="header-underline"></div>
+            </div>
+
+            <!-- Asymmetrical Grid Layout for products -->
+            <div class="products-grid">
+                <!-- Product 1 (Tall Card) -->
+                <div class="product-card fade-in-element">
+                    <div class="product-img-container">
+                        <img src="images/collection.png" alt="Blood Orange & Cacao Bar" class="product-image">
+                        <div class="product-origin">Madagascar</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-percentage">72% Cacao</span>
+                        <h3 class="product-title">Blood Orange & Cracked Espresso</h3>
+                        <p class="product-desc">Zesty, bright citrus notes blending into warm roasted coffee undertones,
+                            harvested from organic Madagascar farms.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$12.00</span>
+                            <button class="btn btn-black-pill add-to-cart-btn" data-name="Blood Orange & Espresso 72%"
+                                data-price="12.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card fade-in-element delay-100">
+                    <div class="product-img-container">
+                        <img src="images/bar-sea-salt-almond.png" alt="Smoked Sea Salt & Almonds Bar" class="product-image">
+                        <div class="product-origin">Ecuador</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-percentage">85% Cacao</span>
+                        <h3 class="product-title">Smoked Sea Salt & Roasted Almond</h3>
+                        <p class="product-desc">Robust dark chocolate with wood-smoked fleur de sel and double-roasted
+                            organic almond slivers.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$11.50</span>
+                            <button class="btn btn-black-pill add-to-cart-btn" data-name="Smoked Sea Salt & Almond 85%"
+                                data-price="11.50">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card fade-in-element delay-200">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/flagged/photo-1554216728-8c7f65f64070?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cm9zZW1hcnklMjBjaG9jb2xhdGV8ZW58MHx8MHx8fDA%3D" alt="Rosemary & Burnt Honey Bar" class="product-image">
+                        <div class="product-origin">Peru</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-percentage">68% Cacao</span>
+                        <h3 class="product-title">Wild Rosemary & Burnt Honey</h3>
+                        <p class="product-desc">An experimental micro-batch bar. Herbaceous wild rosemary notes
+                            sweetened with caramelised wildflower honey.</p>
+                        <div class="product-footer">
+                            <span class="product-price">$13.00</span>
+                            <button class="btn btn-black-pill add-to-cart-btn" data-name="Rosemary & Burnt Honey 68%"
+                                data-price="13.00">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Gift Boxes -->
+    <section class="gift-boxes-section">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Signature Gift Boxes</span>
+                <h2 class="section-title">Elevated Gifting for Every Occasion</h2>
+                <p class="section-desc">Delight with curated presentation boxes, premium ribbons, and handcrafted
+                    chocolate assortments designed to enchant.</p>
+            </div>
+            <div class="featured-products-grid">
+                <div class="featured-product-card fade-in-element">
+                    <div class="product-image-frame">
+                        <img src="https://images.unsplash.com/photo-1711827695761-6e5b95242b6f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNob2NsYXRlJTIwc2hvcHxlbnwwfHwwfHx8MA%3D%3D" alt="Velvet Gift Box">
+                        <div class="product-badge">Velvet</div>
+                    </div>
+                    <h3>Velvet Signature Box</h3>
+                    <p class="product-desc">A sophisticated box with twelve dark chocolates, gold-flecked truffles, and
+                        caramel accents.</p>
+                    <div class="product-footer">
+                        <span class="product-price">$68</span>
+                        <button class="btn btn-small add-to-cart-btn" data-name="Velvet Signature Box"
+                            data-price="68.00">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="featured-product-card fade-in-element" style="transition-delay: 0.1s;">
+                    <div class="product-image-frame">
+                        <img src="https://images.unsplash.com/photo-1706147602203-6e2c340fb6db?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNob2NsYXRlJTIwc2hvcHxlbnwwfHwwfHx8MA%3D%3D" alt="Amber Gift Case">
+                        <div class="product-badge">Amber</div>
+                    </div>
+                    <h3>Amber Luxe Case</h3>
+                    <p class="product-desc">A warm caramel-toned box with curated truffles, tasting notes, and silk
+                        ribbon finish.</p>
+                    <div class="product-footer">
+                        <span class="product-price">$74</span>
+                        <button class="btn btn-small add-to-cart-btn" data-name="Amber Luxe Case" data-price="74.00">Add
+                            to Bag</button>
+                    </div>
+                </div>
+                <div class="featured-product-card fade-in-element" style="transition-delay: 0.2s;">
+                    <div class="product-image-frame">
+                        <img src="https://images.unsplash.com/photo-1526081347589-7fa3cb41b4b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNob2NsYXRlJTIwc2hvcHxlbnwwfHwwfHx8MA%3D%3D" alt="Signature Wood Case">
+                        <div class="product-badge">Collector</div>
+                    </div>
+                    <h3>Signature Wood Case</h3>
+                    <p class="product-desc">A handcrafted wood box with a mix of single-origin squares and artisan
+                        ganache.</p>
+                    <div class="product-footer">
+                        <span class="product-price">$98</span>
+                        <button class="btn btn-small add-to-cart-btn" data-name="Signature Wood Case"
+                            data-price="98.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chocolate of the Month Membership -->
+    <section class="subscription-section">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Chocolate of the Month</span>
+                <h2 class="section-title">Luxury Subscription Membership</h2>
+                <p class="section-desc">Receive rare, rotating chocolate selections with surprise flavors, tasting
+                    notes, and priority access to seasonal launches.</p>
+            </div>
+
+            <div class="subscription-content">
+                <div class="plan-grid">
+                    <!-- Plan 1: Explorer -->
+                    <article class="plan-card plan-explorer" data-plan="Explorer" data-price="45"
+                        data-frequency="Monthly">
+                        <span class="card-badge">Explorer</span>
+                        <h3>Curated Discovery Set</h3>
+                        <p>4 exclusive artisan pieces, tasting notes, and seasonal inspiration in premium packaging.</p>
+                        <ul class="plan-features">
+                            <li>
+                                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>4 curated chocolates</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Surprise monthly flavor</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Complimentary tasting guide</span>
+                            </li>
+                        </ul>
+                        <div class="plan-price">$45 / month</div>
+                    </article>
+
+                    <!-- Plan 2: Connoisseur -->
+                    <article class="plan-card plan-connoisseur" data-plan="Connoisseur" data-price="75"
+                        data-frequency="Monthly">
+                        <div class="card-ribbon">Chef's Choice</div>
+                        <span class="card-badge">Connoisseur</span>
+                        <h3>Signature Collection</h3>
+                        <p>8 artisan chocolates with paired tasting notes in elegant gift packaging.</p>
+                        <ul class="plan-features">
+                            <li>
+                                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>8 premium pieces</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Flavor profile booklet</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Gift-ready presentation</span>
+                            </li>
+                        </ul>
+                        <div class="plan-price">$75 / month</div>
+                    </article>
+
+                    <!-- Plan 3: Collector -->
+                    <article class="plan-card plan-collector" data-plan="Collector" data-price="125"
+                        data-frequency="Monthly">
+                        <span class="card-badge">Collector</span>
+                        <h3>Rare Reserve Box</h3>
+                        <p>12+ rare single-origin selections with exclusive releases and a luxury tasting journal.</p>
+                        <ul class="plan-features">
+                            <li>
+                                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>12+ rare selections</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Priority access</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Collector's presentation</span>
+                            </li>
+                        </ul>
+                        <div class="plan-price">$125 / month</div>
+                    </article>
+                </div>
+
+                <!-- Ticket Summary Panel -->
+                <aside class="summary-panel">
+                    <div class="summary-details">
+                        <span class="editorial-tag">Membership Preview</span>
+                        <h3 class="summary-title">Your Selected Plan</h3>
+                        <div class="summary-meta-grid">
+                            <div class="summary-item">
+                                <span class="summary-label">Plan</span>
+                                <strong id="selected-plan" class="summary-value">Explorer</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Price</span>
+                                <strong id="selected-price" class="summary-value">$45 / month</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Delivery</span>
+                                <strong id="selected-frequency" class="summary-value">Monthly</strong>
+                            </div>
+                        </div>
+                        <p class="summary-copy">Rare chocolates, monthly flavor surprises, and early access to seasonal releases.</p>
+                    </div>
+                    <div class="summary-action">
+                        <button class="btn btn-black-block" id="subscribe-button">Join the Salon</button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial Intro / Philosophy Section -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-text-col fade-in-element">
+                    <span class="section-subtitle">The Cacao Philosophy</span>
+                    <h2 class="section-title text-large">Sourced from the Earth's most remote soils.</h2>
+                    <p class="section-desc">We work directly with micro-lot farmers in Ecuador, Madagascar, and Peru to
+                        source heirloom Criollo and Trinitario beans. Every batch is roasted slowly, stone-ground for 72
+                        hours, and hand-tempered by master chocolatiers in our cream-hued boutique kitchen.</p>
+                    <div class="signature">
+                        <span class="sig-name">Anelia Vance</span>
+                        <span class="sig-title">Founder & Head Chocolatier</span>
+                    </div>
+                </div>
+                <div class="about-visual-col fade-in-element delay-200">
+                    <img src="images/pairing.png" alt="Chef pairing dark chocolate on cream table"
+                        class="offset-image" style="max-width: 440px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="section-container">
+            <div class="testimonials-header text-center">
+                <span class="section-subtitle">Boutique Experience Responses</span>
+                <h2 class="section-title">Voices of Cacao</h2>
+                <div class="header-underline"></div>
+            </div>
+
+            <div class="slider-wrapper">
+                <!-- Slider Container -->
+                <div class="testimonial-slider" id="testimonial-slider">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="quote-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="var(--color-accent-gold)" stroke="none"><path d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v7c0 2.5-1.5 4-3.5 4H6.5"/><path d="M20 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v7c0 2.5-1.5 4-3.5 4h-.5"/></svg>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "The Blood Orange & Cracked Espresso bar is a revelation — bright citrus and deep coffee in every bite. Cacao Artisanal treats chocolate-making as high art."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Elena Rostova</span>
+                            <span class="author-desc">Gourmet Food Critic, Le Menu</span>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="var(--color-accent-gold)" stroke="none"><path d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v7c0 2.5-1.5 4-3.5 4H6.5"/><path d="M20 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v7c0 2.5-1.5 4-3.5 4h-.5"/></svg>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "The Grand Cru truffle assortment stunned every guest with its presentation and depth of flavor. The lavender ganache is perfectly balanced."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Marcus Sterling</span>
+                            <span class="author-desc">Pastry Connoisseur</span>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="var(--color-accent-gold)" stroke="none"><path d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v7c0 2.5-1.5 4-3.5 4H6.5"/><path d="M20 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v7c0 2.5-1.5 4-3.5 4h-.5"/></svg>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "This is a sensory experience. The wild rosemary in the Peru bar is genius — and the presentation matches the premium craft inside."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Sophie Vartiaux</span>
+                            <span class="author-desc">Michelin Guide Contributor</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="slider-nav-btn prev-btn" id="prev-slide" aria-label="Previous Slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12" />
+                            <polyline points="12 19 5 12 12 5" />
+                        </svg>
+                    </button>
+                    <div class="slider-dots" id="slider-dots">
+                        <!-- Dots dynamically rendered or hardcoded -->
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                    <button class="slider-nav-btn next-btn" id="next-slide" aria-label="Next Slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Recipe Modal (Modal for signature recipe guide) -->
+    <div class="recipe-modal" id="recipe-modal">
+        <div class="recipe-modal-overlay" id="recipe-modal-overlay"></div>
+        <div class="recipe-modal-content">
+            <button class="recipe-modal-close" id="recipe-modal-close" aria-label="Close Modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="recipe-modal-body">
+                <!-- Populated dynamically or hardcoded inside modal -->
+                <h2>Detailed Recipe Guide</h2>
+                <h3>The Velvet Cacao & Salted Caramel Tart</h3>
+                <p class="recipe-modal-intro">Crafted by Head Chocolatier Anelia Vance, this decadent tart balances
+                    crisp pastry with rich caramel and glossy single-origin ganache.</p>
+
+                <div class="recipe-steps">
+                    <div class="recipe-step">
+                        <span class="step-num">Step 1</span>
+                        <h4>The Cocoa Pâté Sablée</h4>
+                        <p>In a mixer, beat 120g softened butter, 75g icing sugar, and 25g ground almonds until creamy.
+                            Add 1 organic egg, mix until combined, then fold in 200g plain flour and 30g cocoa powder.
+                            Chill for 1 hour. Roll out to 3mm thickness, press into a tart ring, and bake blind at 170°C
+                            for 15-18 minutes. Let cool.</p>
+                    </div>
+                    <div class="recipe-step">
+                        <span class="step-num">Step 2</span>
+                        <h4>The Citrus-Infused Caramel Layer</h4>
+                        <p>Caramelise 150g white sugar in a heavy saucepan until dark amber. Carefully whisk in 100g
+                            warm heavy cream, a pinch of Maldon salt, and the zest of half an orange. Let boil for 1
+                            minute, then stir in 30g butter. Pour into the cooled tart shell and refrigerate for 30
+                            minutes until set.</p>
+                    </div>
+                    <div class="recipe-step">
+                        <span class="step-num">Step 3</span>
+                        <h4>The Glossy Ganache Glaze</h4>
+                        <p>Heat 120g double cream until simmering. Pour over 120g chopped Cacao Artisanal Madagascar 72%
+                            chocolate. Let stand for 2 minutes, then stir gently from the center outward until
+                            completely smooth. Stir in 15g softened butter for extra gloss. Pour over the caramel layer,
+                            spread evenly, and let set in the fridge for 2 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Column 1: Brand Info -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-main">CACAO</span>
+                    <span class="logo-sub">ARTISANAL</span>
+                </a>
+                <p class="footer-about-text">A modern artisanal chocolate salon, dedicated to slow-crafted truffles,
+                    rare single-origin bars, and visually artistic desserts. Celebrating taste as high art.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M8 22a9 9 0 0 1-2.58-13.78A9 9 0 0 1 18 10c0 4.26-2.94 7-6 7a3 3 0 0 1-2.92-2.58C9 14.07 9.65 12 10.42 10.37c.56-1.18.23-2.37-.84-2.37a2.5 2.5 0 0 0-2.48 2.65c0 .6.15 1.15.35 1.6L6.5 17.5A17.7 17.7 0 0 0 8 22z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Site Navigation -->
+            <div class="footer-links-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home 2 (Story)</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop.html">Delicacy Shop</a></li>
+                    <li><a href="blog.html">Chef's Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Custom Offerings -->
+            <div class="footer-links-col">
+                <h4 class="footer-title">Boutique</h4>
+                <ul>
+                    <li><a href="collections.html">Chocolate Library</a></li>
+                    <li><a href="gift-box.html">Bespoke Gift Boxes</a></li>
+                    <li><a href="seasonal.html">Seasonal Releases</a></li>
+                    <li><a href="collections.html#custom-box-builder">Truffle Box Builder</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Premium Contact Info & Hours -->
+            <div class="footer-contact-col">
+                <h4 class="footer-title">Contact</h4>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <p>42 Caramel Boulevard<br>Suite 100, Gourmet District</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <p><a href="mailto:hello@cacaoartisanal.com"
+                                style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(250,246,240,0.45); padding-bottom: 1px; transition: var(--transition-fast);">hello@cacaoartisanal.com</a>
+                        </p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        <p>+1 (555) 019-2026</p>
+                    </div>
+                </div>
+                <div class="footer-hours">
+                    <strong>Atelier Hours</strong>
+                    Mon - Sat: 10:00 - 19:00 | Sun: 11:00 - 17:00
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright and Legal Links -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Cacao Artisanal. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="products-data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

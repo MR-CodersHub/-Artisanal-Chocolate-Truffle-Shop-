@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('cacao_theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>CACAO ARTISANAL | The Delicacy Shop</title>
+    <meta name="description" content="Shop our premium selection of handcrafted chocolate bars, gold-leaf truffles, and tasting gift boxes. Sourced sustainably, tempered perfectly.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating Abstract Geometric Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <span class="logo-main">CACAO</span>
+                <span class="logo-sub">ARTISANAL</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+    <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="collections.html" class="nav-link">Collections</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-icon-wrapper">
+                        <!-- Sun Icon -->
+                        <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <button class="dir-toggle" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+                <a href="signin.html" class="auth-btn" aria-label="Account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </a>
+                <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shop Editorial Spotlight Section -->
+    <section class="shop-spotlight-section">
+        <div class="container">
+            <div class="shop-spotlight-card fade-in-element">
+                <div class="spotlight-content">
+                    <div class="spotlight-meta-row">
+                        <span>Atelier Spotlight</span>
+                        <span>•</span>
+                        <span style="color: var(--color-black);">Chef's Selection</span>
+                    </div>
+                    <h2 style="font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.25; margin-bottom: 15px; color: var(--color-black);">The Grand Cru Assortment</h2>
+                    <p style="font-weight: 300; font-size: 0.95rem; line-height: 1.7; color: var(--color-text-secondary); margin-bottom: 30px;">
+                        A carefully curated selection of 12 artisan chocolates. Experience the dialogue between our liquid-gold Burnt Caramel, whipped Wild Lavender, and peated Single-Malt Whiskey truffles conched by hand.
+                    </p>
+                    <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+                        <span style="font-size: 1.8rem; font-weight: 600; color: var(--color-black);">$45.00</span>
+                        <button class="btn btn-black-pill add-to-cart-btn" data-name="The Grand Cru Assortment" data-price="45">Add to Box</button>
+                        <a href="product-details.html?id=grand-cru" class="btn btn-line-pill">Discover Terroirs</a>
+                    </div>
+                </div>
+                <div class="spotlight-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1553452118-621e1f860f43?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="The Grand Cru Assortment Box" class="spotlight-img" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Split Catalogue Grid Section -->
+    <section class="products-section" style="background-color: var(--bg-primary); padding-top: 40px;">
+        <div class="container">
+            
+            <div class="shop-catalog-layout">
+                
+                <!-- Left Sidebar Filters Overlay -->
+                <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+                <!-- Left Sidebar Filters -->
+                <aside class="shop-sidebar" id="shop-sidebar">
+                    <div class="sidebar-header">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.4rem;">Filter Palate</h3>
+                        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close Filters">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="sidebar-scroll-content">
+                        <!-- Category Filter Group -->
+                        <div class="filter-group">
+                            <h4>Category</h4>
+                            <ul class="filter-list">
+                                <li>
+                                    <label class="filter-item-label">
+                                        <input type="checkbox" class="filter-checkbox filter-category-checkbox" data-category="truffles">
+                                        <span>Handmade Truffles</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-item-label">
+                                        <input type="checkbox" class="filter-checkbox filter-category-checkbox" data-category="bars">
+                                        <span>Single-Origin Bars</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-item-label">
+                                        <input type="checkbox" class="filter-checkbox filter-category-checkbox" data-category="boxes">
+                                        <span>Curated Tasting Boxes</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Sourcing Terroir Filter Group -->
+                        <div class="filter-group">
+                            <h4>Terroir Origin</h4>
+                            <ul class="filter-list">
+                                <li>
+                                    <label class="filter-item-label">
+                                        <input type="checkbox" class="filter-checkbox filter-origin-checkbox" data-origin="Ecuador">
+                                        <span>Ecuador Sourced</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-item-label">
+                                        <input type="checkbox" class="filter-checkbox filter-origin-checkbox" data-origin="Madagascar">
+                                        <span>Madagascar Sourced</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-item-label">
+                                        <input type="checkbox" class="filter-checkbox filter-origin-checkbox" data-origin="Peru">
+                                        <span>Peru Sourced</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Cacao Intensity Filter Group -->
+                        <div class="filter-group">
+                            <h4>Cacao Intensity</h4>
+                            <ul class="filter-list">
+                                <li>
+                                    <label class="filter-item-label">
+                                        <input type="checkbox" class="filter-checkbox filter-intensity-checkbox" data-intensity="milk">
+                                        <span>Sweet Cacao (White & Milk)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-item-label">
+                                        <input type="checkbox" class="filter-checkbox filter-intensity-checkbox" data-intensity="medium">
+                                        <span>Medium Dark (60% – 72%)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-item-label">
+                                        <input type="checkbox" class="filter-checkbox filter-intensity-checkbox" data-intensity="intense">
+                                        <span>Intense Dark (75%+)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Apply Filters Footer -->
+                    <div class="sidebar-footer">
+                        <button class="apply-filters-btn" id="apply-filters-btn">Apply Filters</button>
+                    </div>
+                </aside>
+
+                <!-- Right Catalogue Contents -->
+                <div class="catalog-results-area">
+                    
+                    <!-- Search & Sort Row -->
+                    <div class="shop-controls" style="margin: 0 0 30px 0; padding-bottom: 20px; border-bottom: 1px solid rgba(44, 27, 24, 0.06); display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;">
+                        
+                        <!-- Search bar -->
+                        <div class="search-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            </svg>
+                            <input type="text" id="shop-search" class="search-input" placeholder="Search by flavor, origin, ingredient...">
+                        </div>
+
+                        <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                            <!-- Mobile Filter Button -->
+                            <button class="mobile-filter-trigger" id="mobile-filter-trigger">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="4" y1="21" x2="4" y2="14" />
+                                    <line x1="4" y1="10" x2="4" y2="3" />
+                                    <line x1="12" y1="21" x2="12" y2="12" />
+                                    <line x1="12" y1="8" x2="12" y2="3" />
+                                    <line x1="20" y1="21" x2="20" y2="16" />
+                                    <line x1="20" y1="12" x2="20" y2="3" />
+                                    <line x1="2" y1="14" x2="6" y2="14" />
+                                    <line x1="10" y1="8" x2="14" y2="8" />
+                                    <line x1="18" y1="16" x2="22" y2="16" />
+                                </svg>
+                                Filter Palate
+                            </button>
+
+                            <!-- Sort select -->
+                            <div class="sort-wrapper">
+                                <span class="sort-label">Sort</span>
+                                <select id="shop-sort" class="sort-select">
+                                    <option value="default">Release Date</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Active Filter Badges Row -->
+                    <div class="active-filters-row" id="active-filters-row" style="display: none;">
+                        <!-- Dynamic Pills injected here by script.js -->
+                    </div>
+
+                    <!-- Dynamic Product Grid -->
+                    <div class="products-grid" id="shop-product-grid" style="margin-top: 0;">
+                        <!-- Dynamically populated from script.js -->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sourcing Integrity Tenets Section -->
+    <section class="sourcing-integrity-section">
+        <div class="container">
+            <div class="text-center fade-in-element" style="margin-bottom: 50px;">
+                <span class="editorial-tag">Honest Sourcing</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.6rem); font-family: var(--font-serif); color: var(--color-black);">The Sourcing Guarantee</h2>
+            </div>
+            
+            <div class="sourcing-layout-split">
+                <div class="fade-in-element sourcing-cards-col">
+                    <div class="sourcing-promises-grid" style="grid-template-columns: 1fr;">
+                        <!-- Promise 1 -->
+                        <div class="sourcing-promise-card fade-in-element" style="text-align: left; display: flex; gap: 18px; align-items: flex-start; padding: 30px;">
+                            <div class="sourcing-promise-icon" style="flex-shrink: 0; color: var(--color-text-primary);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div>
+                                <h3 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 8px; text-align: left;">45% Direct Premium</h3>
+                                <p style="font-size: 0.85rem; font-weight: 300; line-height: 1.7; color: var(--color-text-secondary); text-align: left;">Every contract guarantees a floor price 45% above market, paid directly to the farming families.</p>
+                            </div>
+                        </div>
+                        <!-- Promise 2 -->
+                        <div class="sourcing-promise-card fade-in-element" style="text-align: left; display: flex; gap: 18px; align-items: flex-start; padding: 30px; transition-delay: 0.1s;">
+                            <div class="sourcing-promise-icon" style="flex-shrink: 0; color: var(--color-text-primary);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <h3 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 8px; text-align: left;">72h Granite Conching</h3>
+                                <p style="font-size: 0.85rem; font-weight: 300; line-height: 1.7; color: var(--color-text-secondary); text-align: left;">Nibs are slow-ground between pre-warmed granite melangeurs for 72 hours — retaining aromatic compounds lost in high-friction methods.</p>
+                            </div>
+                        </div>
+                        <!-- Promise 3 -->
+                        <div class="sourcing-promise-card fade-in-element" style="text-align: left; display: flex; gap: 18px; align-items: flex-start; padding: 30px; transition-delay: 0.2s;">
+                            <div class="sourcing-promise-icon" style="flex-shrink: 0; color: var(--color-text-primary);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            </div>
+                            <div>
+                                <h3 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 8px; text-align: left;">Insulated Cold Ship</h3>
+                                <p style="font-size: 0.85rem; font-weight: 300; line-height: 1.7; color: var(--color-text-secondary); text-align: left;">Insulated containers with phase-change gel packs maintain 16&ndash;20&deg;C for 72 hours. Every order is tracked in real time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in-element delay-200 sourcing-image-col">
+                    <div style="border: 1px solid rgba(44, 27, 24, 0.1); padding: 12px; background-color: var(--bg-primary); border-radius: var(--radius-card); overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1734692928513-351516b38869?w=600&auto=format" alt="Cacao stone grinding" style="width:100%; height:auto; object-fit:cover; border-radius: calc(var(--radius-card) - 8px); display:block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Quick View Modal -->
+    <div class="quickview-modal" id="quickview-modal">
+        <div class="modal-overlay" id="quickview-overlay"></div>
+        <div class="modal-wrapper">
+            <button class="modal-close-btn" id="quickview-close-btn" aria-label="Close Preview">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="modal-grid">
+                <div class="modal-img-container">
+                    <img id="qv-image" src="" alt="Product Preview">
+                </div>
+                <div class="modal-details">
+                    <span id="qv-badge" class="prod-badge">Signature</span>
+                    <h2 id="qv-title" class="prod-title">Product Title</h2>
+                    
+                    <div class="prod-meta-row" style="margin-bottom:15px; font-family: var(--font-sans); font-size: 0.8rem; color: var(--color-text-secondary); display: flex; gap: 10px; align-items: center;">
+                        <span id="qv-percentage" style="font-weight: 600; color: var(--color-accent);">72% CACAO</span>
+                        <span>•</span>
+                        <span id="qv-origin">Ecuador</span>
+                    </div>
+                    
+                    <div id="qv-price" class="prod-price-large" style="margin-bottom:15px; font-weight:600; font-family: var(--font-sans);">$0.00</div>
+                    <p id="qv-desc" class="prod-description-large" style="color:var(--color-text-secondary); line-height:1.6; margin-bottom:20px; font-weight:300;">Product description...</p>
+                    
+                    <!-- Tasting Profile indicators -->
+                    <div class="tasting-profile-box" style="background:var(--bg-secondary); padding:20px; border-radius:var(--radius-card); margin-bottom:25px; border: 1px solid rgba(44, 27, 24, 0.04);">
+                        <h4 style="font-family: var(--font-sans); font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:15px;">Palate Profile</h4>
+                        <div class="tasting-bars" style="display:grid; grid-template-columns:1fr 1fr; gap:15px 25px;">
+                            <div class="tasting-bar-item">
+                                <div class="tb-header" style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:5px; font-family: var(--font-sans);">
+                                    <span>Sweetness</span>
+                                    <span id="qv-val-sweetness">0/5</span>
+                                </div>
+                                <div class="tb-track" style="height:6px; background:rgba(44,27,24,0.08); border-radius:3px; overflow:hidden;">
+                                    <div id="qv-fill-sweetness" class="tb-fill" style="height:100%; background:var(--color-accent); width:0%;"></div>
+                                </div>
+                            </div>
+                            <div class="tasting-bar-item">
+                                <div class="tb-header" style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:5px; font-family: var(--font-sans);">
+                                    <span>Intensity</span>
+                                    <span id="qv-val-intensity">0/5</span>
+                                </div>
+                                <div class="tb-track" style="height:6px; background:rgba(44,27,24,0.08); border-radius:3px; overflow:hidden;">
+                                    <div id="qv-fill-intensity" class="tb-fill" style="height:100%; background:var(--color-accent); width:0%;"></div>
+                                </div>
+                            </div>
+                            <div class="tasting-bar-item">
+                                <div class="tb-header" style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:5px; font-family: var(--font-sans);">
+                                    <span>Fruitiness</span>
+                                    <span id="qv-val-fruitiness">0/5</span>
+                                </div>
+                                <div class="tb-track" style="height:6px; background:rgba(44,27,24,0.08); border-radius:3px; overflow:hidden;">
+                                    <div id="qv-fill-fruitiness" class="tb-fill" style="height:100%; background:var(--color-accent); width:0%;"></div>
+                                </div>
+                            </div>
+                            <div class="tasting-bar-item">
+                                <div class="tb-header" style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:5px; font-family: var(--font-sans);">
+                                    <span>Woodiness</span>
+                                    <span id="qv-val-woodiness">0/5</span>
+                                </div>
+                                <div class="tb-track" style="height:6px; background:rgba(44,27,24,0.08); border-radius:3px; overflow:hidden;">
+                                    <div id="qv-fill-woodiness" class="tb-fill" style="height:100%; background:var(--color-accent); width:0%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="display:flex; gap:15px; align-items:center;">
+                        <button id="qv-add-btn" class="btn btn-black-pill" style="flex-grow:1;">Add to Box</button>
+                        <a id="qv-details-link" href="" class="btn btn-line-pill" style="text-align:center; padding: 12px 20px;">Full Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Column 1: Brand Info -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-main">CACAO</span>
+                    <span class="logo-sub">ARTISANAL</span>
+                </a>
+                <p class="footer-about-text">A modern artisanal chocolate salon, dedicated to slow-crafted truffles, rare single-origin bars, and visually artistic desserts. Celebrating taste as high art.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22a9 9 0 0 1-2.58-13.78A9 9 0 0 1 18 10c0 4.26-2.94 7-6 7a3 3 0 0 1-2.92-2.58C9 14.07 9.65 12 10.42 10.37c.56-1.18.23-2.37-.84-2.37a2.5 2.5 0 0 0-2.48 2.65c0 .6.15 1.15.35 1.6L6.5 17.5A17.7 17.7 0 0 0 8 22z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Site Navigation -->
+            <div class="footer-links-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home 2 (Story)</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop.html">Delicacy Shop</a></li>
+                    <li><a href="blog.html">Chef's Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Custom Offerings -->
+            <div class="footer-links-col">
+                <h4 class="footer-title">Boutique</h4>
+                <ul>
+                    <li><a href="collections.html">Chocolate Library</a></li>
+                    <li><a href="gift-box.html">Bespoke Gift Boxes</a></li>
+                    <li><a href="seasonal.html">Seasonal Releases</a></li>
+                    <li><a href="collections.html#custom-box-builder">Truffle Box Builder</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Premium Contact Info & Hours -->
+            <div class="footer-contact-col">
+                <h4 class="footer-title">Contact</h4>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <p>42 Caramel Boulevard<br>Suite 100, Gourmet District</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <p><a href="mailto:hello@cacaoartisanal.com" style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(250,246,240,0.45); padding-bottom: 1px; transition: var(--transition-fast);">hello@cacaoartisanal.com</a></p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <p>+1 (555) 019-2026</p>
+                    </div>
+                </div>
+                <div class="footer-hours">
+                    <strong>Atelier Hours</strong>
+                    Mon - Sat: 10:00 - 19:00 | Sun: 11:00 - 17:00
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright and Legal Links -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Cacao Artisanal. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="products-data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+

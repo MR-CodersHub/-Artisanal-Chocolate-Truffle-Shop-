@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('cacao_theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>CACAO ARTISANAL | Curated Collections & Tasting Flights</title>
+    <meta name="description" content="Discover our curated tasting boxes and experiential flights. Perfect for corporate gifting, custom occasions, and structured sensory pairings.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating Abstract Geometric Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <span class="logo-main">CACAO</span>
+                <span class="logo-sub">ARTISANAL</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+    <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="collections.html" class="nav-link">Collections</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-icon-wrapper">
+                        <!-- Sun Icon -->
+                        <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <button class="dir-toggle" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+                <a href="signin.html" class="auth-btn" aria-label="Account">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </a>
+                <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Collections Hero -->
+    <section class="collections-hero">
+        <div class="container text-center">
+            <span class="editorial-tag">BEAN-TO-BAR COLLECTIONS</span>
+            <h1 style="font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 15px;">Bean-to-Bar Journeys & Single-Origin Stories</h1>
+            <p class="section-subtitle" style="max-width: 620px; margin: 0 auto; font-weight:400; color: var(--color-text-primary);">Explore rare cacao collections from Madagascar, Peru, Ecuador, and West Africa, crafted for tasting clarity, provenance, and premium pairing experiences.</p>
+        </div>
+    </section>
+
+    <section class="collection-showcase-section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <span class="editorial-tag">ORIGIN LIBRARY</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); font-family: var(--font-serif);">From Single Farm to Signature Bar</h2>
+                <p class="section-desc" style="max-width: 700px; margin: 20px auto 0 auto; font-weight: 400; color: var(--color-text-primary);">Each collection celebrates the terroir, roast profile, and sensory signature of the cacao, presented with tasting notes, packaging cues, and refined pairing inspiration.</p>
+            </div>
+            <div class="collection-grid">
+                <article class="collection-card">
+                    <div style="width:100%; height:180px; border-radius:calc(var(--radius-card) - 8px); overflow:hidden; margin-bottom:16px;">
+                        <img src="https://images.unsplash.com/photo-1619848566843-9027f3c7aac2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Madagascar origins" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <span class="card-badge">Madagascar</span>
+                    <h3>Moist Citrus Whisper</h3>
+                    <p>Vivid tart cherry, bergamot, and a refined bright finish with Madagascar Trinitario beans.</p>
+                </article>
+                <article class="collection-card">
+                    <div style="width:100%; height:180px; border-radius:calc(var(--radius-card) - 8px); overflow:hidden; margin-bottom:16px;">
+                        <img src="https://plus.unsplash.com/premium_photo-1675857197756-6b952b13a929?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Peru origins" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <span class="card-badge">Peru</span>
+                    <h3>Sun-Kissed Floral</h3>
+                    <p>Delicate jasmine, honeyed caramel, and warm spice from Amazon Criollo selections.</p>
+                </article>
+                <article class="collection-card">
+                    <div style="width:100%; height:180px; border-radius:calc(var(--radius-card) - 8px); overflow:hidden; margin-bottom:16px;">
+                        <img src="https://images.unsplash.com/photo-1575377427642-087cf684f29d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Ecuador origins" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <span class="card-badge">Ecuador</span>
+                    <h3>Velvet Roast</h3>
+                    <p>Soft almond, toasted cocoa nibs, and creamy depth in a silky single-origin bar.</p>
+                </article>
+                <article class="collection-card">
+                    <div style="width:100%; height:180px; border-radius:calc(var(--radius-card) - 8px); overflow:hidden; margin-bottom:16px;">
+                        <img src="https://images.unsplash.com/photo-1582176604856-e824b4736522?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="West Africa origins" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <span class="card-badge">West Africa</span>
+                    <h3>Noir Ember</h3>
+                    <p>Rich dried fruit, leather, and warm clove notes from hand-selected Ghanaian beans.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasting Flight Spotlight Section -->
+    <section class="flight-section">
+        <div class="container">
+            
+            <div class="flight-card fade-in-element">
+                <div class="flight-image">
+                    <img src="https://images.unsplash.com/photo-1599599811214-3d44be99547f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hvY29sYXRlfGVufDB8fDB8fHww" alt="Tasting flight" style="width:100%; height:100%; min-height:240px; object-fit:cover;">
+                </div>
+                <div class="flight-info">
+                    <span class="editorial-tag">Palate Architecture</span>
+                    <h3>The Cacao Tasting Flight</h3>
+                    <p style="font-weight: 300; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 25px;">Experience our single-origin chocolate through our chef's curated sensory sequence.</p>
+                    
+                    <div class="flight-steps">
+                        <!-- Step 1 -->
+                        <div class="flight-step">
+                            <div class="fs-num">1</div>
+                            <div class="fs-text">
+                                <h4>Purify the Palate</h4>
+                                <p>Sip warm water or unsweetened green tea to cleanse the palate.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flight-step">
+                            <div class="fs-num">2</div>
+                            <div class="fs-text">
+                                <h4>Inhale the Aromatics</h4>
+                                <p>Break the chocolate and inhale near the break line to detect fruity and woody notes.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flight-step">
+                            <div class="fs-num">3</div>
+                            <div class="fs-text">
+                                <h4>Melting & Snap Analysis</h4>
+                                <p>Place a piece on the tongue and let it melt slowly, noting the texture shift from silk to cream.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="shop.html?category=boxes" class="btn btn-black-pill" style="display: inline-block;">Acquire Tasting Box</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Gifting & Corporate Customization Options -->
+    <section class="gifting-section" style="padding: 100px 0;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <span class="editorial-tag">BESPOKE SERVICES</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); font-family: var(--font-serif);">Bespoke Gifting Services</h2>
+                <p style="max-width: 600px; margin: 15px auto 0 auto; font-weight:400; color: var(--color-text-primary);">Create custom packages, personalized flavors, and corporate gifting arrangements for special gatherings.</p>
+            </div>
+
+            <div class="gifting-block">
+                
+                <!-- Option 1 -->
+                <div class="gift-option fade-in-element">
+                    <span class="gift-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 20v-6"/><path d="M6 14l-3-6 3 6z"/><path d="M18 14l3-6-3 6z"/><path d="M12 8V4"/><path d="M9 4h6"/></svg>
+                    </span>
+                    <div style="width:100%; height:140px; border-radius:calc(var(--radius-card) - 8px); overflow:hidden;">
+                        <img src="https://images.unsplash.com/photo-1493925410384-84f842e616fb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hvY29sYXRlfGVufDB8fDB8fHww" alt="Corporate Gifting" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h4>Corporate Gifting</h4>
+                    <p>Impress your partners with custom chocolate boxes featuring embossed brand typography, gold foil finishes, and hand-selected flavor flights.</p>
+                </div>
+
+                <!-- Option 2 -->
+                <div class="gift-option fade-in-element" style="transition-delay: 0.1s;">
+                    <span class="gift-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M12 13v9"/><path d="M8 18l4-3 4 3"/></svg>
+                    </span>
+                    <div style="width:100%; height:140px; border-radius:calc(var(--radius-card) - 8px); overflow:hidden;">
+                        <img src="https://images.unsplash.com/photo-1623000850264-08be785877bd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Custom Chocolate Art" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h4>Custom Chocolate Art</h4>
+                    <p>Design a custom monogram print or unique botanical flavor pairings with our chef for your event.</p>
+                </div>
+
+                <!-- Option 3 -->
+                <div class="gift-option fade-in-element" style="transition-delay: 0.2s;">
+                    <span class="gift-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </span>
+                    <div style="width:100%; height:140px; border-radius:calc(var(--radius-card) - 8px); overflow:hidden;">
+                        <img src="https://images.unsplash.com/photo-1638194645412-1d0b4c53ffed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Temperature Safe Shipping" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h4>Temperature Safe Shipping</h4>
+                    <p>All collections are dispatched in insulated, dry-ice packed luxury boxes to guarantee your truffles arrive in tempered, glossy perfection.</p>
+                </div>
+
+            </div>
+
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="contact.html?subject=bespoke" class="btn btn-black-pill">Request Custom Inquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Build Your Own Box Customizer Section -->
+    <section class="builder-section" id="custom-box-builder">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <span class="editorial-tag">Bespoke Masterpiece</span>
+                <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); font-family: var(--font-serif); color: var(--color-black);">Build Your Custom Box</h2>
+                <p style="font-weight: 400; max-width: 550px; margin: 15px auto 0 auto; color: var(--color-text-primary);">Select 8 truffles from our signature botanical, citrus, and caramel collections to assemble your own bespoke library box.</p>
+            </div>
+
+            <div class="builder-grid">
+                <!-- Box Assembly (Left) -->
+                <div class="box-assembly-area">
+                    <span class="editorial-tag">Your Custom Cacao Box</span>
+                    <h3 style="font-family: var(--font-sans); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px;">8 pieces capacity</h3>
+                    
+                    <div class="box-grid-slots">
+                        <div class="box-slot" data-index="0"><span class="box-slot-empty">+</span></div>
+                        <div class="box-slot" data-index="1"><span class="box-slot-empty">+</span></div>
+                        <div class="box-slot" data-index="2"><span class="box-slot-empty">+</span></div>
+                        <div class="box-slot" data-index="3"><span class="box-slot-empty">+</span></div>
+                        <div class="box-slot" data-index="4"><span class="box-slot-empty">+</span></div>
+                        <div class="box-slot" data-index="5"><span class="box-slot-empty">+</span></div>
+                        <div class="box-slot" data-index="6"><span class="box-slot-empty">+</span></div>
+                        <div class="box-slot" data-index="7"><span class="box-slot-empty">+</span></div>
+                    </div>
+
+                    <div class="builder-controls">
+                        <span id="builder-count" style="display: block; margin-bottom: 15px; font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">0 / 8 Pieces Selected</span>
+                        <button class="btn btn-black-pill" id="builder-checkout-btn" disabled style="width: 100%; max-width: 320px;">Fill Box (8 more)</button>
+                    </div>
+                </div>
+
+                <!-- Truffle Selector (Right) -->
+                <div class="truffle-pills-selector">
+                    <span class="editorial-tag">Select to Add</span>
+                    
+                    <!-- Truffle Card 1 -->
+                    <div class="truffle-selection-card" data-name="Burnt Caramel Truffle" data-img="images/truffle-burnt-caramel.png">
+                        <div style="width:50px; height:50px; border-radius:8px; flex-shrink:0; overflow:hidden;">
+                            <img src="https://images.unsplash.com/photo-1542843137-8791a6904d14?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Burnt Caramel Truffle" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="truffle-select-meta">
+                            <h4>Burnt Caramel Truffle</h4>
+                            <p>Liquid amber caramel, Fleur de Sel, 70% dark shell</p>
+                        </div>
+                    </div>
+
+                    <!-- Truffle Card 2 -->
+                    <div class="truffle-selection-card" data-name="Wild Lavender Ganache" data-img="images/truffle-lavender.png">
+                        <div style="width:50px; height:50px; border-radius:8px; flex-shrink:0; overflow:hidden;">
+                            <img src="https://plus.unsplash.com/premium_photo-1670426501227-450cb0d92a16?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Wild Lavender Ganache" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="truffle-select-meta">
+                            <h4>Wild Lavender Ganache</h4>
+                            <p>Whipped white chocolate ganache, infused lavender buds</p>
+                        </div>
+                    </div>
+
+                    <!-- Truffle Card 3 -->
+                    <div class="truffle-selection-card" data-name="Blood Orange Praline" data-img="images/truffle-orange-praline.png">
+                        <div style="width:50px; height:50px; border-radius:8px; flex-shrink:0; overflow:hidden;">
+                            <img src="https://images.unsplash.com/photo-1587271644048-2fbb187de8d8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Blood Orange Praline" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="truffle-select-meta">
+                            <h4>Blood Orange Praline</h4>
+                            <p>Sicilian blood orange reduction, hazelnut praline cream</p>
+                        </div>
+                    </div>
+
+                    <!-- Truffle Card 4 -->
+                    <div class="truffle-selection-card" data-name="Whiskey Infused Truffle" data-img="images/truffle-burnt-caramel.png">
+                        <div style="width:50px; height:50px; border-radius:8px; flex-shrink:0; overflow:hidden;">
+                            <img src="https://images.unsplash.com/photo-1545015451-f05567aa6bcc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGNob2NvbGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Whiskey Infused Truffle" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="truffle-select-meta">
+                            <h4>Whiskey Infused Truffle</h4>
+                            <p>Islay single-malt ganache, dark chocolate dust</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Column 1: Brand Info -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-main">CACAO</span>
+                    <span class="logo-sub">ARTISANAL</span>
+                </a>
+                <p class="footer-about-text">A chocolate atelier focused on single-origin bars, hand-painted truffles, and direct-trade sourcing from five growing regions across South America, Africa, and Southeast Asia.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22a9 9 0 0 1-2.58-13.78A9 9 0 0 1 18 10c0 4.26-2.94 7-6 7a3 3 0 0 1-2.92-2.58C9 14.07 9.65 12 10.42 10.37c.56-1.18.23-2.37-.84-2.37a2.5 2.5 0 0 0-2.48 2.65c0 .6.15 1.15.35 1.6L6.5 17.5A17.7 17.7 0 0 0 8 22z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Site Navigation -->
+            <div class="footer-links-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home 2 (Story)</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop.html">Delicacy Shop</a></li>
+                    <li><a href="blog.html">Chef's Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Custom Offerings -->
+            <div class="footer-links-col">
+                <h4 class="footer-title">Boutique</h4>
+                <ul>
+                    <li><a href="collections.html">Chocolate Library</a></li>
+                    <li><a href="gift-box.html">Bespoke Gift Boxes</a></li>
+                    <li><a href="seasonal.html">Seasonal Releases</a></li>
+                    <li><a href="collections.html#custom-box-builder">Truffle Box Builder</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Premium Contact Info & Hours -->
+            <div class="footer-contact-col">
+                <h4 class="footer-title">Contact</h4>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <p>42 Caramel Boulevard<br>Suite 100, Gourmet District</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <p><a href="mailto:hello@cacaoartisanal.com" style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(250,246,240,0.45); padding-bottom: 1px; transition: var(--transition-fast);">hello@cacaoartisanal.com</a></p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <p>+1 (555) 019-2026</p>
+                    </div>
+                </div>
+                <div class="footer-hours">
+                    <strong>Atelier Hours</strong>
+                    Mon - Sat: 10:00 - 19:00 | Sun: 11:00 - 17:00
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright and Legal Links -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Cacao Artisanal. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="products-data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
